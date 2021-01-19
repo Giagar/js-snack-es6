@@ -99,7 +99,10 @@ for (var l = 0; l < listaSquadre.length; l++) {
     listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
     listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 
-    resultSquadre.push([listaSquadre[l].nome, listaSquadre[l].falli]);
+    resultSquadre.push({
+        nome: listaSquadre[l].nome, 
+        falli: listaSquadre[l].falli
+    });
 }
 
 console.log(resultSquadre);

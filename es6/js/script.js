@@ -18,18 +18,21 @@ const arr = [
     } 
 ];
 
-//porting es6
 let biciLight = arr[0];
 
 for (let i = 0; i < arr.length; i++) {
     if(arr[i].peso < biciLight.peso) {
-        biciLight = arr[i]
+        biciLight = arr[i];
     }
 }
 
 console.log(`La bici più leggera è ${biciLight.nome} e pesa solo ${biciLight.peso} kg.`);
 
 // ESERCIZIO 2
+function randomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 const listaSquadre = [
     {
         nome: "squadra1",
@@ -53,16 +56,18 @@ const listaSquadre = [
     } 
 ];
 
-// porting es6
-let result = [];
+const result = [];
 
 for (let l = 0; l < listaSquadre.length; l++) {
-    listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
-    listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    listaSquadre[l].punti = randomNumber(0, 100);
+    listaSquadre[l].falli = randomNumber(0, 100);
 
-    let {nome, falli} = listaSquadre[l];
+    const {nome, falli} = listaSquadre[l];
 
-    result.push([nome, falli]);
+    result.push({
+        nome, 
+        falli
+    });
 }
 
 console.log(result);
