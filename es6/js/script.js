@@ -56,12 +56,10 @@ var listaSquadre = [
 var result = [];
 
 for (var l = 0; l < listaSquadre.length; l++) {
-    listaSquadre[l].punti = Math.random();
-    listaSquadre[l].falli = Math.random();
+    listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 
-    let {nome, falli} = listaSquadre[l];
-
-    result.push([nome, falli]);
+    result.push([listaSquadre[l].nome, listaSquadre[l].falli]);
 }
 
 console.log(result);
