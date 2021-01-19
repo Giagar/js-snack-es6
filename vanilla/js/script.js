@@ -68,3 +68,38 @@ for (var n = 0; n < arr.length; n++) {
 }
 
 console.log(biciLeggera);
+
+//ESERCIZIO 2
+var listaSquadre = [
+    {
+        nome: "squadra1",
+        punti: 0,
+        falli: 0
+    }, 
+    {
+        nome: "squadra2",
+        punti: 0,
+        falli: 0
+    }, 
+    {
+        nome: "squadra3",
+        punti: 0,
+        falli: 0
+    }, 
+    {
+        nome: "squadra4",
+        punti: 0,
+        falli: 0
+    } 
+];
+
+var resultSquadre = [];
+
+for (var l = 0; l < listaSquadre.length; l++) {
+    listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+    listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
+
+    resultSquadre.push([listaSquadre[l].nome, listaSquadre[l].falli]);
+}
+
+console.log(resultSquadre);

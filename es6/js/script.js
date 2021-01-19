@@ -29,8 +29,8 @@ for (let i = 0; i < arr.length; i++) {
 
 console.log(`La bici più leggera è ${biciLight.nome} e pesa solo ${biciLight.peso} kg.`);
 
-//ESERCIZIO 2
-var listaSquadre = [
+// ESERCIZIO 2
+const listaSquadre = [
     {
         nome: "squadra1",
         punti: 0,
@@ -53,20 +53,8 @@ var listaSquadre = [
     } 
 ];
 
-var result = [];
-
-for (var l = 0; l < listaSquadre.length; l++) {
-    listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
-    listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
-
-    result.push([listaSquadre[l].nome, listaSquadre[l].falli]);
-}
-
-console.log(result);
-
 // porting es6
-
-let result2 = [];
+let result = [];
 
 for (let l = 0; l < listaSquadre.length; l++) {
     listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
@@ -74,7 +62,7 @@ for (let l = 0; l < listaSquadre.length; l++) {
 
     let {nome, falli} = listaSquadre[l];
 
-    result2.push([nome, falli]);
+    result.push([nome, falli]);
 }
 
-console.log(result2);
+console.log(result);
