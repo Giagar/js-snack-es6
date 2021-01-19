@@ -26,7 +26,8 @@ for (let i = 0; i < arr.length; i++) {
     }
 }
 
-console.log(`La bici più leggera è ${biciLight.nome} e pesa solo ${biciLight.peso} kg.`);
+const risultatoBici = `La bici più leggera è <strong>${biciLight.nome}</strong> e pesa solo <strong>${biciLight.peso} kg</strong>.`;
+document.querySelector(".risultatoBici").innerHTML = risultatoBici;
 
 // ESERCIZIO 2
 function randomNumber(min, max) {
