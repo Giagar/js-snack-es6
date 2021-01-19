@@ -32,22 +32,22 @@ console.log(`La bici più leggera è ${biciLight.nome} e pesa solo ${biciLight.p
 //ESERCIZIO 2
 var listaSquadre = [
     {
-        nome: "bici1",
+        nome: "squadra1",
         punti: 0,
         falli: 0
     }, 
     {
-        nome: "bici2",
+        nome: "squadra2",
         punti: 0,
         falli: 0
     }, 
     {
-        nome: "bici3",
+        nome: "squadra3",
         punti: 0,
         falli: 0
     }, 
     {
-        nome: "bici4",
+        nome: "squadra4",
         punti: 0,
         falli: 0
     } 
@@ -74,9 +74,9 @@ for (let l = 0; l < listaSquadre.length; l++) {
     listaSquadre[l].punti = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
     listaSquadre[l].falli = Math.floor(Math.random() * (100 - 0 + 1)) + 0;
 
-    let {punti, falli} = listaSquadre[l];
+    let {nome, falli} = listaSquadre[l];
 
-    result2.push([punti, falli]);
+    result2.push([nome, falli]);
 }
 
 console.log(result2);
