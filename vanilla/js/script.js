@@ -15,7 +15,7 @@ var arr = [
         nome: "bici4",
         peso: 9
     } 
-]
+];
 
 var temp = 100;
 var index = 0;
