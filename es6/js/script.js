@@ -72,3 +72,31 @@ for (let l = 0; l < listaSquadre.length; l++) {
 }
 
 console.log(result);
+
+// ESERCIZIO 3
+const arrEs3 = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+//con forEach
+const fewerElements1 = (arr, min, max) => {
+
+    let arrResult = [];
+    arr.forEach((el, i) => {
+        if(i >= (min - 1) && i <= (max - 1)) { // -1 perché min e max sono da considerare in "linguaggio umano"
+            arrResult.push(el)
+        }
+    })
+    
+    return arrResult;
+}
+
+console.log(fewerElements1(arrEs3, 2, 5))
+
+//con filter
+const fewerElements2 = (arr, min, max) => {
+
+    return arr.filter((el, i) => {
+        return i >= (min - 1) && i <= (max - 1); // -1 perché min e max sono da considerare in "linguaggio umano"
+    })
+}
+
+console.log(fewerElements2(arrEs3, 2, 5))

@@ -106,3 +106,25 @@ for (var l = 0; l < listaSquadre.length; l++) {
 }
 
 console.log(resultSquadre);
+
+// ESERCIZIO 3
+var arrEs3 = ['a', 'b', 'c', 'd', 'e', 'f'];
+
+function fewerElements(arr, min, max) {
+    //soluzione ottimale
+    // var arr = arr.slice(min - 1, max);
+    // return arr;
+
+    //con for
+    var arrResult = [];
+    for(var ii = 0; ii < arr.length; ii++) {
+        if(ii >= (min - 1) && ii <= (max - 1)) { // -1 perché min e max sono da considerare in "linguaggio umano"
+            arrResult.push(arr[ii])
+        }
+    }
+
+    return arrResult;
+}
+
+console.log(fewerElements(arrEs3, 2, 5));
+
